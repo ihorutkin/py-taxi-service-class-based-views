@@ -15,6 +15,7 @@ def index(request):
 
     return render(request, "taxi/index.html", context=context)
 
+
 class ManufacturerListView(generic.ListView):
     model = Manufacturer
     template_name = "taxi/manufacturer_list.html"
@@ -33,6 +34,7 @@ class CarListView(generic.ListView):
 
 class CarDetailView(generic.DetailView):
     model = Car
+
 
 class DriverListView(generic.ListView):
     model = Driver
